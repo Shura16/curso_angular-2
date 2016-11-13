@@ -9,23 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var InputPropertyComponent = (function () {
-    function InputPropertyComponent() {
-        this.nomeCurso = 'Curso da Loiane';
+var MeuPrimeiroComponent = (function () {
+    function MeuPrimeiroComponent() {
     }
-    __decorate([
-        core_1.Input('nome'), 
-        __metadata('design:type', String)
-    ], InputPropertyComponent.prototype, "nomeCurso", void 0);
-    InputPropertyComponent = __decorate([
+    MeuPrimeiroComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
-            selector: 'curso',
-            template: '{{ nomeCurso }}',
+            selector: 'meu-primeiro-componente',
+            template: '<h2>Meu Primeiro Componente</h2>'
         }), 
         __metadata('design:paramtypes', [])
-    ], InputPropertyComponent);
-    return InputPropertyComponent;
+    ], MeuPrimeiroComponent);
+    return MeuPrimeiroComponent;
 }());
-exports.InputPropertyComponent = InputPropertyComponent;
-//# sourceMappingURL=input-property.component.js.map
+exports.MeuPrimeiroComponent = MeuPrimeiroComponent;
+//# sourceMappingURL=meu-primeiro.component.js.map

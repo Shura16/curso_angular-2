@@ -9,13 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-/** Serviços com o CRUD com dados hardcoded para Cursos. */
+/**
+ * Classe de Serviços para Cursos.
+ */
 var CursosService = (function () {
     function CursosService() {
     }
-    /** Obtém todos os cursos. */
-    CursosService.prototype.getAll = function () {
-        return ['Angular 2', 'Java', 'Spring Boot', 'Node JS'];
+    /**
+     * Obtém uma lista de Cursos.
+     * @return string[] Lista de Cursos.
+     */
+    CursosService.prototype.getCursos = function () {
+        return ['Angular 2', 'Java', 'Spring Boot'];
     };
     CursosService = __decorate([
         core_1.Injectable(), 

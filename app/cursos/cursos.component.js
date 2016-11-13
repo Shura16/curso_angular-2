@@ -10,10 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var cursos_service_1 = require('./cursos.service');
+/**
+ * Classe de Compomente para Cursos.
+ * @selector cursos-lista
+ */
 var CursosComponent = (function () {
-    function CursosComponent(service) {
-        this.header = 'Lista de Cursos';
-        this.cursos = service.getAll();
+    /**
+     * Inicializa a lista de Cursos.
+     */
+    function CursosComponent(cursosService) {
+        this.nome = 'João Antônio';
+        this.cursos = cursosService.getCursos();
     }
     CursosComponent = __decorate([
         core_1.Component({
