@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var data_binding_component_1 = require('./data-binding/data-binding.component');
 var meu_primeiro_component_1 = require('./primeiro/meu-primeiro.component');
 var cursos_component_1 = require('./cursos/cursos.component');
 var AppComponent = (function () {
@@ -19,7 +20,7 @@ var AppComponent = (function () {
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html',
-            directives: [meu_primeiro_component_1.MeuPrimeiroComponent, cursos_component_1.CursosComponent]
+            directives: [meu_primeiro_component_1.MeuPrimeiroComponent, cursos_component_1.CursosComponent, data_binding_component_1.DataBindingComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
