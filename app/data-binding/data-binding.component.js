@@ -8,21 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var DataBindingComponent = (function () {
     function DataBindingComponent() {
         this.url = 'www.google.com.br';
         this.urlImg = 'http://www.lorempixel.com/400/200/nature';
+        this.conteudoAtual = '';
+        this.conteudoSalvo = '';
+        this.isMouseOver = false;
     }
-    DataBindingComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'data-binding',
-            templateUrl: 'data-binding.component.html'
-        }), 
-        __metadata('design:paramtypes', [])
-    ], DataBindingComponent);
+    DataBindingComponent.prototype.onClick = function () {
+        console.info('O botão foi clicado!');
+    };
+    DataBindingComponent.prototype.onKeyup = function (event) {
+        console.log(event);
+        this.conteudoAtual = event.target.value;
+    };
+    DataBindingComponent.prototype.onSave = function (valor) {
+        this.conteudoSalvo = valor;
+    };
+    DataBindingComponent.prototype.onMouseSpan = function () {
+        this.isMouseOver = !this.isMouseOver;
+    };
     return DataBindingComponent;
 }());
+DataBindingComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'data-binding',
+        templateUrl: 'data-binding.component.html',
+        styleUrls: ['data-binding.component.css']
+    }),
+    __metadata("design:paramtypes", [])
+], DataBindingComponent);
 exports.DataBindingComponent = DataBindingComponent;
 //# sourceMappingURL=data-binding.component.js.map
