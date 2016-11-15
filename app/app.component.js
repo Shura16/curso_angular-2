@@ -12,15 +12,20 @@ var core_1 = require('@angular/core');
 var data_binding_component_1 = require('./data-binding/data-binding.component');
 var meu_primeiro_component_1 = require('./primeiro/meu-primeiro.component');
 var cursos_component_1 = require('./cursos/cursos.component');
+var life_cycle_component_1 = require('./ciclo/life-cycle.component');
 var AppComponent = (function () {
     function AppComponent() {
+        this.valorInicial = 15;
     }
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-app',
             templateUrl: 'app.component.html',
-            directives: [meu_primeiro_component_1.MeuPrimeiroComponent, cursos_component_1.CursosComponent, data_binding_component_1.DataBindingComponent]
+            directives: [
+                meu_primeiro_component_1.MeuPrimeiroComponent, cursos_component_1.CursosComponent,
+                data_binding_component_1.DataBindingComponent, life_cycle_component_1.LifeCycleComponent
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
