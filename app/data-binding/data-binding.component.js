@@ -8,7 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
+var input_property_component_1 = require('./input-property.component');
+var output_property_component_1 = require('./output-property.component');
 var DataBindingComponent = (function () {
     function DataBindingComponent() {
         this.url = 'www.google.com.br';
@@ -18,6 +20,8 @@ var DataBindingComponent = (function () {
         this.nome = '';
         this.isMouseOver = false;
         this.pessoa = { nome: '', idade: 18 };
+        this.nomeCurso = 'Curso de Angular 2';
+        this.valorInicial = 10;
     }
     DataBindingComponent.prototype.onClick = function () {
         console.info('O botão foi clicado!');
@@ -31,16 +35,20 @@ var DataBindingComponent = (function () {
     DataBindingComponent.prototype.onMouseSpan = function () {
         this.isMouseOver = !this.isMouseOver;
     };
+    DataBindingComponent.prototype.onValorMudou = function (event) {
+        console.log(event);
+    };
+    DataBindingComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'data-binding',
+            templateUrl: 'data-binding.component.html',
+            styleUrls: ['data-binding.component.css'],
+            directives: [input_property_component_1.InputPropertyComponent, output_property_component_1.OutputPropertyComponent]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], DataBindingComponent);
     return DataBindingComponent;
 }());
-DataBindingComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'data-binding',
-        templateUrl: 'data-binding.component.html',
-        styleUrls: ['data-binding.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], DataBindingComponent);
 exports.DataBindingComponent = DataBindingComponent;
 //# sourceMappingURL=data-binding.component.js.map

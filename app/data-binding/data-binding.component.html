@@ -82,7 +82,6 @@
     </div>
   </article>
 </section>
--->
 
 <section class="two-way-data-binding">
   <article>
@@ -98,6 +97,18 @@
       <br /><br />
       Nome: {{ pessoa.nome }} <br />
       Idade: {{ pessoa.idade }} <br />
+    </div>
+  </article>
+</section>
+-->
+
+<section class="input-property">
+  <article>
+    <h3>Input/Output Properties</h3>
+    <div>
+      <curso [nome]="nomeCurso"></curso>
+      <contador [valor]="valorInicial"
+        (valorMudou)="onValorMudou($event)"></contador>
     </div>
   </article>
 </section>
