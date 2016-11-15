@@ -65,7 +65,7 @@
       <button class="btn btn-info" (click)="onClick()">Clica em mim!</button>
       <p></p>
       <input #campo type="text"
-        (keyup)="onKeyup($event)"
+        (keyup)="onKeyup(campo.value)"
         (keyup.enter)="onSave(campo.value)"
         (blur)="onSave(campo.value)"
        />

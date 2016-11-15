@@ -21,9 +21,8 @@ export class DataBindingComponent {
     console.info('O botão foi clicado!');
   }
 
-  onKeyup(event:KeyboardEvent) {
-    console.log(event);
-    this.conteudoAtual = event.target.value;
+  onKeyup(valor:string) {
+    this.conteudoAtual = valor;
   }
 
   onSave(valor:string) {
