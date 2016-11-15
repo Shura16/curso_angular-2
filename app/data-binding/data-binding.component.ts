@@ -15,7 +15,11 @@ export class DataBindingComponent {
   conteudoAtual : string = '';
   conteudoSalvo : string = '';
 
+  nome : string = '';
+
   isMouseOver : boolean = false;
+
+  pessoa = { nome: '', idade: 18 };
 
   onClick() {
     console.info('O botão foi clicado!');
