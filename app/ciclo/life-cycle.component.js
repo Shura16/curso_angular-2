@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var LifeCycleComponent = (function () {
     function LifeCycleComponent() {
         this.valorInicial = 10;
@@ -19,9 +19,10 @@ var LifeCycleComponent = (function () {
     };
     LifeCycleComponent.prototype.ngOnInit = function () {
         this.log('ngOnInit');
+        this.log(this.variavelLocalP);
     };
-    LifeCycleComponent.prototype.ngOnDoCheck = function () {
-        this.log('ngOnDoCheck');
+    LifeCycleComponent.prototype.ngDoCheck = function () {
+        this.log('ngDoCheck');
     };
     LifeCycleComponent.prototype.ngAfterContentInit = function () {
         this.log('ngAfterContentInit');
@@ -41,18 +42,22 @@ var LifeCycleComponent = (function () {
     LifeCycleComponent.prototype.log = function (hook) {
         console.log(hook);
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
-    ], LifeCycleComponent.prototype, "valorInicial", void 0);
-    LifeCycleComponent = __decorate([
-        core_1.Component({
-            selector: 'life-cycle',
-            template: "\n    <p>Valor Inicial {{ valorInicial }}</p>\n  "
-        }), 
-        __metadata('design:paramtypes', [])
-    ], LifeCycleComponent);
     return LifeCycleComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Number)
+], LifeCycleComponent.prototype, "valorInicial", void 0);
+__decorate([
+    core_1.ViewChild('variavelLocalP'),
+    __metadata("design:type", HTMLElement)
+], LifeCycleComponent.prototype, "variavelLocalP", void 0);
+LifeCycleComponent = __decorate([
+    core_1.Component({
+        selector: 'life-cycle',
+        template: "\n    <p #variavelLocalP>Valor Inicial {{ valorInicial }}</p>\n    <p>{{ variavelLocalP.textContent }}</p>\n  "
+    }),
+    __metadata("design:paramtypes", [])
+], LifeCycleComponent);
 exports.LifeCycleComponent = LifeCycleComponent;
 //# sourceMappingURL=life-cycle.component.js.map
