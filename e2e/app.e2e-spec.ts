@@ -1,15 +1,14 @@
+import { CursoAngular2Page } from './app.po';
 
-describe('QuickStart E2E Tests', function () {
+describe('curso-angular-2 App', function() {
+  let page: CursoAngular2Page;
 
-  let expectedMsg = 'My First Angular 2 App';
-
-
-  beforeEach(function () {
-    browser.get('');
+  beforeEach(() => {
+    page = new CursoAngular2Page();
   });
 
-  it('should display: ' + expectedMsg, function () {
-    expect(element(by.css('h1')).getText()).toEqual(expectedMsg);
+  it('should display message saying app works', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('app works!');
   });
-
 });
